@@ -39,3 +39,4 @@ wp*/vendor/
 
 /mutagen.yml*
 
+/.php_cs.cache
