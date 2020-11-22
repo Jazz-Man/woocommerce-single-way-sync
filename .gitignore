@@ -6,7 +6,7 @@
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
-!wp*/wp-content/themes/storefront
+!wp*/wp-content/themes/single-way-sync
 wp*/wp-content/
 wp*/wp-admin/
 wp*/wp-includes/
