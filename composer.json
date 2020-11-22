@@ -1,0 +1,24 @@
+{
+    "name": "vasilsokolik/wp1",
+    "authors": [
+        {
+            "name": "Vasyl Sokolyk",
+            "email": "vsokolyk@gmail.com"
+        }
+    ],
+    "require": {
+        "roots/wp-config": "^1.0",
+        "roots/wp-password-bcrypt": "^1.0",
+        "vlucas/phpdotenv": "^5.2"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "classmap-authoritative": true,
+        "apcu-autoloader": true
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}
