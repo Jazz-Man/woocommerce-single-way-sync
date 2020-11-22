@@ -16,7 +16,7 @@ wp*/*.php
 wp*/wp-content/plugins/hello.php
 
 # ignore specific themes
-wp*/wp-content/themes/twenty*/
+wp*/wp-content/themes/
 wp*/.htaccess
 wp*/license.txt
 wp*/readme.html
