@@ -19,6 +19,11 @@
         "apcu-autoloader": true
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "symfony/var-dumper": "^5.1"
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-mbstring": "*"
     }
 }
