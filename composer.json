@@ -1,24 +1,83 @@
 {
-    "name": "vasilsokolik/wp1",
-    "authors": [
-        {
-            "name": "Vasyl Sokolyk",
-            "email": "vsokolyk@gmail.com"
-        }
-    ],
-    "require": {
-        "roots/wp-config": "^1.0",
-        "roots/wp-password-bcrypt": "^1.0",
-        "vlucas/phpdotenv": "^5.2"
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true,
-        "classmap-authoritative": true,
-        "apcu-autoloader": true
-    },
-    "require-dev": {
-        "roave/security-advisories": "dev-master"
+  "name": "vasilsokolik/wp1",
+  "authors": [
+    {
+      "name": "Vasyl Sokolyk",
+      "email": "vsokolyk@gmail.com"
     }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "roots/wordpress": "^5.5",
+    "roots/wp-config": "^1.0",
+    "roots/wp-password-bcrypt": "^1.0",
+    "vlucas/phpdotenv": "^5.2",
+    "wpackagist-plugin/woocommerce": "^4.7",
+    "wpackagist-plugin/woocommerce-other-payment-gateway": "^1.3",
+    "wpackagist-theme/storefront": "^2.9"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "classmap-authoritative": true,
+    "apcu-autoloader": true
+  },
+  "extra": {
+    "installer-paths": {
+      "vendor/wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "vendor/wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "vendor/wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "vendor/wp"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "symfony/var-dumper": "^5.1"
+  },
+  "replace": {
+    "symfony/polyfill-ctype": "*",
+    "symfony/polyfill-mbstring": "*"
+  },
+  "scripts": {
+    "deploy": [
+      "@wp-install"
+    ],
+    "wp-install": [
+      "rm -rf vendor/wp/wp-content/themes/twenty*",
+      "rm -rf vendor/wp/wp-content/plugins/hello.php",
+      "@wp-admin",
+      "@wp-admin",
+      "@wp-config",
+      "@wp-themes",
+      "@wp-clear"
+    ],
+    "wp-admin": [
+      "rsync -avz vendor/wp/wp-admin/ wp1/wp-admin/ --delete",
+      "rsync -avz vendor/wp/wp-admin/ wp2/wp-admin/ --delete"
+    ],
+    "wp-includes": [
+      "rsync -avz vendor/wp/wp-includes/ wp1/wp-includes/ --delete",
+      "rsync -avz vendor/wp/wp-includes/ wp2/wp-includes/ --delete"
+    ],
+    "wp-config": [
+      "rsync -avz --include='vendor/wp/*.php' --exclude='wp-config.php' vendor/wp/ wp1/",
+      "rsync -avz --include='vendor/wp/*.php' --exclude='wp-config.php' vendor/wp/ wp2/"
+    ],
+    "wp-themes": [
+      "rm -rf {wp1,wp2}/wp-content/themes/storefront",
+      "rsync -avz vendor/wp/wp-content/themes/ wp1/wp-content/themes/",
+      "rsync -avz vendor/wp/wp-content/themes/ wp2/wp-content/themes/"
+    ],
+    "wp-clear": [
+      "rm -rf {wp1,wp2}/wp-config-sample.php",
+      "rm -rf {wp1,wp2}/wp-content/themes/twenty*",
+      "rm -rf {wp1,wp2}/wp-content/plugins/hello.php"
+    ]
+  }
 }
