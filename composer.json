@@ -13,6 +13,7 @@
     }
   ],
   "require": {
+    "jazzman/autoload-interface": "^0.3.0",
     "roots/wordpress": "^5.5",
     "roots/wp-config": "^1.0",
     "roots/wp-password-bcrypt": "^1.0",
@@ -43,6 +44,13 @@
   "replace": {
     "symfony/polyfill-ctype": "*",
     "symfony/polyfill-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sync\\WpSource\\": "wp1/wp-content/themes/single-way-sync/inc",
+      "Sync\\WpDestination\\": "wp2/wp-content/themes/single-way-sync/inc",
+      "Sync\\Utils\\": "utils"
+    }
   },
   "scripts": {
     "deploy": [

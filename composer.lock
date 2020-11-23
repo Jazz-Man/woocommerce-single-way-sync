@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b716ede40d085a8c740217306bd3ba1",
+    "content-hash": "68ce87e399efe617908a9b0513a1cef1",
     "packages": [
         {
             "name": "composer/installers",
@@ -204,6 +204,47 @@
                 }
             ],
             "time": "2020-04-13T13:17:36+00:00"
+        },
+        {
+            "name": "jazzman/autoload-interface",
+            "version": "0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jazz-Man/autoload-interface.git",
+                "reference": "9088f134da2b15a380582ff43ba68845bb4d852d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jazz-Man/autoload-interface/zipball/9088f134da2b15a380582ff43ba68845bb4d852d",
+                "reference": "9088f134da2b15a380582ff43ba68845bb4d852d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JazzMan\\AutoloadInterface\\": ""
+                },
+                "files": [
+                    "helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vasyl Sokolyk",
+                    "email": "vsokolyk@gmail.com"
+                }
+            ],
+            "time": "2020-11-07T23:01:34+00:00"
         },
         {
             "name": "phpoption/phpoption",

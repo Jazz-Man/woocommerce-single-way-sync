@@ -7,6 +7,10 @@
  * @package single-way-sync
  */
 
+use Sync\WpSource\App;
+
+new App();
+
 add_action( 'wp_enqueue_scripts', 'storefront_parent_theme_enqueue_styles' );
 
 /**
