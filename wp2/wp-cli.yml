@@ -1,0 +1,6 @@
+url: http://159.65.76.231/wp2
+user: admin
+color: true
+
+apache_modules:
+  - mod_rewrite
