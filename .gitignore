@@ -11,6 +11,7 @@ wp*/wp-admin/
 wp*/wp-includes/
 wp*/*.php
 !wp*/wp-config.php
+!wp*/wp-content/mu-plugins/*.php
 # ignore these plugins
 wp*/wp-content/plugins/hello.php
 
