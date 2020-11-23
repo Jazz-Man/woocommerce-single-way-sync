@@ -14,6 +14,7 @@
   ],
   "require": {
     "jazzman/autoload-interface": "^0.3.0",
+    "jazzman/wp-performance": "^1.9",
     "roots/wordpress": "^5.5",
     "roots/wp-config": "^1.0",
     "roots/wp-password-bcrypt": "^1.0",
@@ -62,6 +63,7 @@
       "@wp-admin",
       "@wp-includes",
       "@wp-config",
+      "@wp-mu-plugins",
       "@wp-plugins",
       "@wp-themes",
       "@wp-clear"
@@ -77,6 +79,10 @@
     "wp-config": [
       "rsync -avz --include='vendor/wp/*.php' --exclude='wp-config.php' vendor/wp/ wp1/",
       "rsync -avz --include='vendor/wp/*.php' --exclude='wp-config.php' vendor/wp/ wp2/"
+    ],
+    "wp-mu-plugins": [
+      "rsync -avz vendor/wp/wp-content/mu-plugins/ wp1/wp-content/mu-plugins/",
+      "rsync -avz vendor/wp/wp-content/mu-plugins/ wp2/wp-content/mu-plugins/"
     ],
     "wp-plugins": [
       "rsync -avz vendor/wp/wp-content/plugins/ wp1/wp-content/plugins/ --delete",
