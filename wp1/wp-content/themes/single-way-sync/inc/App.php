@@ -11,7 +11,8 @@ class App
     {
         app_autoload_classes([
 			Stripe::class,
-			CheckoutValidation::class
+			CheckoutValidation::class,
+			SyncData::class
         ]);
     }
 }
