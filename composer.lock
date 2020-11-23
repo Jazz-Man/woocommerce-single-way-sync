@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ad888f119368bd4bd83339444c0e859",
+    "content-hash": "7b716ede40d085a8c740217306bd3ba1",
     "packages": [
         {
             "name": "composer/installers",
@@ -658,22 +658,22 @@
             "homepage": "https://wordpress.org/plugins/woocommerce/"
         },
         {
-            "name": "wpackagist-plugin/woocommerce-other-payment-gateway",
-            "version": "1.3.2",
+            "name": "wpackagist-plugin/woocommerce-gateway-stripe",
+            "version": "4.5.5",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/woocommerce-other-payment-gateway/",
-                "reference": "trunk"
+                "url": "https://plugins.svn.wordpress.org/woocommerce-gateway-stripe/",
+                "reference": "tags/4.5.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-other-payment-gateway.zip?timestamp=1601278870"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.4.5.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/woocommerce-other-payment-gateway/"
+            "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
         },
         {
             "name": "wpackagist-theme/storefront",
