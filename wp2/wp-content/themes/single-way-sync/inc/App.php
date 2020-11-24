@@ -4,6 +4,7 @@ namespace Sync\WpDestination;
 
 use Sync\Utils\Gateway\Stripe;
 use Sync\Utils\Wc\CheckoutValidation;
+use Sync\WpDestination\RestAPI\RestApi;
 
 class App
 {
@@ -11,7 +12,8 @@ class App
 	{
 		app_autoload_classes([
 			Stripe::class,
-			CheckoutValidation::class
+			CheckoutValidation::class,
+			RestApi::class
 		]);
 	}
 
